@@ -36,7 +36,7 @@ def calculate_wdl(fen):
   return  jsonify({"wdl_stats": [None,None,None]})
 
 
-# fish=init_stockfish()
+fish=init_stockfish()
 
 
 
