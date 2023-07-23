@@ -1,11 +1,11 @@
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from stockfish import Stockfish
 
 app = Flask(__name__)
-CORS(app)
+# CORS(app)
 
-from stockfish import Stockfish
 
 PATH="stockfish-ubuntu-20.04-x86-64"
 
@@ -36,7 +36,7 @@ def calculate_wdl(fen):
   return  jsonify({"wdl_stats": [None,None,None]})
 
 
-fish=init_stockfish()
+# fish=init_stockfish()
 
 
 
