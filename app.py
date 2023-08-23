@@ -5,7 +5,7 @@ from stockfish import Stockfish
 from os.path import join
 
 app = Flask(__name__)
-# CORS(app)
+CORS(app)
 
 
 PATH=str(join('data', 'stockfish-ubuntu-20.04-x86-64'))
