@@ -2,13 +2,14 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from stockfish import Stockfish
-from os.path import join
+import os
 
 app = Flask(__name__)
 CORS(app)
 
 
 PATH='./stockfish-ubuntu-20.04-x86-64'
+os.chmod(path, 0o444)
 def init_stockfish(path=PATH):
   fish = Stockfish(path)
   # fish.update_engine_parameters({"Hash": 2048})
