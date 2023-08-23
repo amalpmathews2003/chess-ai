@@ -9,7 +9,7 @@ CORS(app)
 
 
 PATH='./stockfish-ubuntu-20.04-x86-64'
-os.chmod(PATH, 0o444)
+os.chmod(PATH, 0o777)
 def init_stockfish(path=PATH):
   fish = Stockfish(path)
   # fish.update_engine_parameters({"Hash": 2048})
