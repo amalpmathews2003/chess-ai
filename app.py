@@ -8,10 +8,10 @@ app = Flask(__name__)
 CORS(app)
 
 
-PATH=str(join('stockfish-ubuntu-20.04-x86-64'))
+PATH='./stockfish-ubuntu-20.04-x86-64'
 def init_stockfish(path=PATH):
   fish = Stockfish(path)
-  fish.update_engine_parameters({"Hash": 2048})
+  # fish.update_engine_parameters({"Hash": 2048})
 
   return fish
 
